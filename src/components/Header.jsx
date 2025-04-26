@@ -1,14 +1,23 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Button } from '@mui/material'
+import { CustomProps } from './CustomProps'
 
 
 
-const Header = ({ setdialog, setsignupOPen, setloginopen }) => {
+const Header = () => {
+    const { setdialog, setsignupOPen, setloginopen, setforgotpasword,
+        dataUser, setAuthdetails,
+        Authdetails, userDetails
+    } = useContext(CustomProps)
+
+
+
 
     const LoginFunction = () => {
         setdialog(true)
         setsignupOPen(false)
         setloginopen(true)
+        setforgotpasword(false)
 
     }
 
@@ -16,24 +25,59 @@ const Header = ({ setdialog, setsignupOPen, setloginopen }) => {
         setdialog(true)
         setsignupOPen(true)
         setloginopen(false)
+        setforgotpasword(false)
 
     }
+    // useEffect(() => {
+    //     const storedData = sessionStorage?.getItem("loginDetails");
+    //     const checkingData = storedData ? JSON.parse(storedData) : null;
+    //     console.log(checkingData.name)
+
+    // }, [userDetails])
     return (
         <div style={{ padding: "10px 60px", backgroundColor: "skyblue", alignItems: "center" }} className='d-flex justify-content-between' >
             <div >
-                <div className='Humber'>  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-                </svg></div>
-                <div style={{ fontWeight: "bold" }}>School Web App</div>
+                {/* <div className='Humber'> </div> */}
+                <div style={{ fontWeight: "bold" }}>School Web App  </div>
 
 
 
             </div>
-            <div style={{ display: "flex", gap: "6px", alignItems: "center", justifyContent: "end" }}>
-                <div><Button size='small' variant='contained' sx={{ textTransform: "none" }} onClick={LoginFunction}>Login</Button></div>
-                <div><Button size='small' variant='contained' sx={{ textTransform: "none", backgroundColor: "red" }} onClick={SignupFUnction}> Sign UP</Button></div>
-                <div> "sriram"</div>
-            </div>
+            {userDetails.length > 0 ? (<>
+            </>) : (<>
+                <div style={{ display: "flex", gap: "6px", alignItems: "center", justifyContent: "end" }}>
+                    <div><Button size='small' variant='contained' sx={{ textTransform: "none" }} onClick={LoginFunction}>Login</Button></div>
+                    <div><Button size='small' variant='contained' sx={{ textTransform: "none", backgroundColor: "red" }} onClick={SignupFUnction}> Sign UP</Button></div>
+                    {/* <div style={{ display: "flex", justifyContent: "center", alignItems: "center", borderRadius: "50%", height: "30px", width: "30px", background: "white", marginLeft: "10px" }}>
+
+                </div> */}
+                    {/* {dataUser && (<>  <div className='boxHOver'>
+                    <div style={{}}>
+                        <div>
+                            <label>User :</label>
+                            <div>{ }</div>
+
+
+                        </div>
+                        <div>
+                            <label>Role :</label>
+                            <div>{ }</div>
+
+                        </div>
+                        <div>
+                            <label>Logout</label>
+                            <div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div></>)} */}
+
+                </div>
+            </>)}
+
 
 
         </div>

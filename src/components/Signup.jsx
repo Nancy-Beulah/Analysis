@@ -3,21 +3,9 @@ import "../stylings/signup.css"
 import { Button } from '@mui/material'
 
 
-const Signup = ({ setdialog, setsignupOPen, setloginopen }) => {
-    const [loading, setloading] = useState(false)
-    const [formData, setformDate] = useState({
-        user: "",
-        mail: "",
-        password: "",
-        confirmpassword: "",
-
-    })
+const Signup = ({ setdialog, setsignupOPen, setloginopen, loading, setloading, formData, InputChange }) => {
 
 
-    const InputChange = (e) => {
-        setformDate({ ...formData, [e.target.name]: e.target.value })
-
-    }
     const SubmitData = async (e) => {
         e.preventDefault();
         if (formData.password !== formData.confirmpassword) {
@@ -58,6 +46,9 @@ const Signup = ({ setdialog, setsignupOPen, setloginopen }) => {
         }
 
     }
+
+
+
     return (
         <div className='Section h-100 w-100 d-flex justify-content-center align-items-center bg-white'>
             {loading ? <><div className='loader'></div></> : <><form onSubmit={SubmitData} style={{ display: "flex", flexDirection: "column", gap: "12px" }}>

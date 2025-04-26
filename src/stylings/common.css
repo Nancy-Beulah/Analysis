@@ -1,0 +1,17 @@
+.boxLanding {
+    display: flex;
+    height: 100%;
+}
+
+.LAndingBOxMAin {
+    height: 40vh;
+    width: 100%;
+    border: 1px solid;
+    background-image: url("../assests//landingBanner.jpg");
+    background-size: contain;
+    background-position: left top;
+    /* Align image to top-left */
+    background-repeat: no-repeat;
+}
+
+.imgCon {}
