@@ -1,0 +1,193 @@
+.LandingMinBOx {
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+
+}
+
+.landBanner {
+    height: 50vh;
+    width: 100%;
+    background-image: url("../assests/landingBanner.jpg");
+    background-size: cover;
+    /* fills full width */
+    background-repeat: no-repeat;
+    background-position: center center;
+    /* nicely center the image */
+    /* display: flex;
+        /* in case you're positioning text inside */
+    /* align-items: center;  */
+
+}
+
+.TextMOTStyle {
+    color: white;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    height: 100%;
+    width: 50%;
+    margin-left: 60px;
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+
+.contnetContainer {
+
+    display: flex;
+    position: absolute;
+    top: 60%;
+    left: 20%;
+}
+
+.Datacontnet {
+    display: flex;
+    gap: 24px;
+}
+
+.commonContainers {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid;
+    height: 200px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 150px;
+}
+
+.centered-grid-container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    align-items: stretch;
+}
+
+
+
+.centered-grid-container2 {
+
+    /* transform: translateX(-50%); */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    align-items: stretch;
+}
+
+
+.centered-grid-container3 {
+
+    /* transform: translateX(-50%); */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    align-items: stretch;
+    height: auto;
+}
+
+.reviewMappData {
+    width: 50%;
+    /* float: right; */
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    /* align-items: end; */
+}
+
+.BoxStyling {
+    height: auto;
+}
+
+.listData {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+
+}
+
+.BOX {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 1rem;
+    border-radius: 8px;
+    height: 100%;
+    border: 1px solid #e0e0e0;
+    /* Makes the card fill its grid cell */
+    box-sizing: border-box;
+}
+
+.boxTItle {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #3775b2;
+    text-align: center;
+}
+
+.boxsummary {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.BOX:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+@media screen and (min-device-width:900px) and (max-device-width:1400px) {
+    .landBanner {
+        height: 60vh;
+        width: 100%;
+        background-image: url("../assests/landingBanner.jpg");
+        background-size: cover;
+        /* fills full width */
+        background-repeat: no-repeat;
+        background-position: center center;
+        /* nicely center the image */
+        /* display: flex;
+            /* in case you're positioning text inside */
+        /* align-items: center;  */
+
+    }
+
+
+}
+
+
+
+@media screen and (min-device-width:1400px) {
+    .landBanner {
+        height: 65vh;
+        width: 100%;
+        background-image: url("../assests/landingBanner.jpg");
+        background-size: cover;
+        /* fills full width */
+        background-repeat: no-repeat;
+        background-position: center center;
+        /* nicely center the image */
+        /* display: flex;
+            /* in case you're positioning text inside */
+        /* align-items: center;  */
+
+    }
+
+
+}
